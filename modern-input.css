@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box !important;
+}
+
+.modern-label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    max-width: calc(100% - 32px);
+    color: rgba(0, 0, 0, .54);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all .25s;
+    transform-origin: left;
+    transition-property: transform, color, font-size;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.modern-wrapper {
+    position: relative;
+    display: block;
+    border-radius: inherit;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: haas, helvetica, arial, sans-serif;
+}
+
+.modern-input {
+    height: 56px;
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    background-color: #ecf1f7;
+    transition-duration: .25s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+    width: 100%;
+    padding: 19px 16px 0;
+}
+
+.modern-input:focus~.modern-label,
+.modern-input:valid~.modern-label {
+    transform: translateY(-10px) scale(0.87);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.modern-input:focus {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 1px #000;
+    -webkit-appearance: none;
+}
+
+.modern-input:valid~.right-content {
+    display: flex;
+}
+
+.right-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.reset-button {
+    margin-right: 18px;
+    background-color: transparent;
+    color: inherit;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.reset-icon {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .4);
+    transition: color .25s;
+}

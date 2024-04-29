@@ -1,0 +1,73 @@
+.autocomplete_wrapper {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 40em;
+    min-width: 18em;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+
+#styled .autocomplete_wrapper ul.address_autocomplete_list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    max-height: 8em;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0 !important;
+    margin-top: 1em;
+    background-color: #FFF;
+    border-radius: 8px;
+    z-index: 11;
+}
+
+#styled .autocomplete_wrapper ul.address_autocomplete_list li:last-child {
+    margin-bottom: 0.5em;
+}
+
+#styled .autocomplete_wrapper ul.address_autocomplete_list li:first-child {
+    margin-top: 1em;
+    padding-top: 0;
+}
+
+#styled li {
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+    list-style-type: none;
+    font-family: haas, helvetica, arial, sans-serif;
+    transition: all 0.225s ease-in-out;
+    border-bottom: 1px;
+    background: linear-gradient(to right, rgb(179 179 179) 0%, rgb(255 255 255 / 0%) 100%) left bottom #fff0 no-repeat;
+    background-size: 100% 1px;
+}
+
+#styled li:hover {
+    color: rgb(13, 110, 253);
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.v {
+    flex-direction: column;
+}
+
+.h-text {
+    margin-bottom: 1em;
+}
+
+.b-text {
+    font-size: 1em;
+    font-family: haas, helvetica, arial, sans-serif;
+}

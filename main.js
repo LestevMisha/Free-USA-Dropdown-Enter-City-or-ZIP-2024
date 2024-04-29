@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputs = document.querySelectorAll('.address_autocomplete');
     if (inputs.length > 0) {
         inputs.forEach((input) => {
-            const zipCodesUl = input.nextElementSibling;
+            const zipCodesUl = input.closest(".autocomplete_wrapper").querySelector(".address_autocomplete_list");
             // if clicked - insert
             zipCodesUl.addEventListener("click", (e) => {
                 input.value = e.target.textContent;
