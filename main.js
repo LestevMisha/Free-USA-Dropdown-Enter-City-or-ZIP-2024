@@ -215,15 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     };
 
-    const usaAddressesInput = document.getElementById("usa_addresses_input");
-    const usaAddressesList = document.getElementById("usa_addresses_list");
-
-    // Add Listener
-    usaAddressesInput.addEventListener("input", function (e) {
-        search(e.target.value.trim().toLowerCase());
-    });
-
-
     // load scripts asynchronously / load-as-user-goes
     function loadScript(src) {
         return new Promise(function (resolve, reject) {
@@ -287,7 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // make a limit
                     limitedList = filteredList.slice(0, 50);
-                    console.log(limitedList)
                     // add an element
                     addLiFiltering(limitedList, listElement, value);
                     // disable load
@@ -302,7 +292,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
                 // make a limit
                 limitedList = filteredList.slice(0, 50);
-                console.log(limitedList)
                 // add an element
                 addLiFiltering(limitedList, listElement, value);
 
